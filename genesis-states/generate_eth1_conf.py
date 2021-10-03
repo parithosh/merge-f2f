@@ -49,9 +49,9 @@ out = {
     "baseFeePerGas":"0x7"
 }
 
-for key, value in data['eth1_premine'].items():
-    acct = w3.eth.account.from_mnemonic(data['mnemonic'], account_path=key, passphrase='')
-    weival = value.replace('ETH', '0' * 18)
-    out["alloc"][acct.address] = {"balance": weival}
+# for key, value in data['eth1_premine'].items():
+#     acct = w3.eth.account.from_mnemonic(data['mnemonic'], account_path=key, passphrase='')
+#     weival = value.replace('ETH', '0' * 18)
+#     out["alloc"][acct.address] = {"balance": weival}
 
 print(json.dumps(out, indent='  '))
