@@ -1,10 +1,12 @@
 ## Genesis state creation
 
-### general setup
-- Set eth1_genesis_timestamp inside `mergenet.yaml` to the current timestamp or a timestamp in the future. 
-To use the current timestamp run: `sed -i -e s/GENESIS_TIMESTAMP/$(date +%s)/ mergenet.yaml`
+### Quick setup
+- Modify `mergenet.yaml` with the required config variables
+- Run `./generate_everything_i_dont_care.sh` to generate all the states you would need for interop
 
-### generate consensus and execution configs
+### Generate consensus and execution configs separately
+- Set eth1_genesis_timestamp inside `mergenet.yaml` to the current timestamp or a timestamp in the future.
+  To use the current timestamp run: `sed -i -e s/GENESIS_TIMESTAMP/$(date +%s)/ mergenet.yaml`
 - Generate the folders and create the configs:
 ```bash
 # Inside your setupenv: Generate ETH1/ETH2 configs

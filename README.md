@@ -1,11 +1,12 @@
 # merge-f2f
 This repo is for scripts to run various clients at the merge f2f.
 
-## Tested with lighthouse!
+## Tested with Lighthouse!
+## Tested with Geth!
 
 ## General dependecies
 ```bash
-apt-get install python3-dev python3-pip python3-venv golang
+sudo apt-get install python3-dev python3-pip python3-venv golang
 
 # Check that you have Go 1.16+ installed
 go version
@@ -21,9 +22,11 @@ go install github.com/protolambda/eth2-testnet-genesis@latest
 go install github.com/protolambda/eth2-val-tools@latest
 # You are now in the right directory to run the setupenv commands below.
 ```
-## How To Run
-This testnet requires 3 terminal processes, one for a execution client one for a consensus node and one for a consensus validator. 
- Go to each folder that you want to run and run the required commands in the `README.md` file.
+
+## Now what?
+- Create the genesis states required by going to the `genesis-states/README.md` and following the instructions
+- Run an execution client by going to `m2/execution-clients/<client>/README.md`
+- Run a consensus beacon client + validator by going to `m2/consensus-clients/<client>/README.md`
 
 Lots of info taken from [Lighthouse](https://github.com/sigp/lighthouse-merge-f2f), thanks!
 
