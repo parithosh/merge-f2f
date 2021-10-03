@@ -1,5 +1,11 @@
+# Generic config
+testnet_name: mergenet
+
+# consensus config
+## key related
 mnemonic: "enforce patient ridge volume question system myself moon world glass later hello tissue east chair suspect remember check chicken bargain club exit pilot sand"
-chain_id: 700
+number_of_validator_hosts: 1
+## config related
 deposit_contract_address: "0x4242424242424242424242424242424242424242"
 # either 'minimal' or 'mainnet'
 eth2_base_config: minimal
@@ -7,3 +13,6 @@ eth2_fork_version: "0x00000700"
 eth1_genesis_timestamp: GENESIS_TIMESTAMP
 # Tweak this. actual_genesis_timestamp = eth1_genesis_timestamp + eth2_genesis_delay
 eth2_genesis_delay: 600
+
+# execution config
+chain_id: 700

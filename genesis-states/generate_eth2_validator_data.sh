@@ -33,10 +33,17 @@ fi
 #
 # You can change the range of validator accounts, to split keys between nodes.
 # The mnemonic and key-range should match that of a tranche of validators in the beacon-state genesis.
-echo "[*] Building validator keystores"
-eth2-val-tools keystores \
-  --out-loc "$TESTNET_NAME/private/$VALIDATOR_NODE_NAME" \
-  --prysm-pass="foobar" \
-  --source-min=0 \
-  --source-max=64 \
-  --source-mnemonic="$(grep "^mnemonic" mergenet.yaml | awk -F":" '{ print $2 }' | tr -d '"' )"
+NUMBER_OF_VALIDATING_HOSTS="$(grep "^number_of_validator_hosts" mergenet.yaml | awk -F":" '{ print $2 }')"
+echo "[*] Building validator keystores for $NUMBER_OF_VALIDATING_HOSTS hosts"
+
+for (( i=0; i<$NUMBER_OF_VALIDATING_HOSTS; i++ ))
+do
+   echo "creating keys for host $i from key $(expr 64 '*' $i) to $(expr 64 '*' $i '+' 64)"
+
+   eth2-val-tools keystores \
+     --out-loc "$TESTNET_NAME/private/$VALIDATOR_NODE_NAME" \
+     --prysm-pass="foobar" \
+     --source-min=$(expr 64 '*' $i) \
+     --source-max=$(expr 64 '*' $i '+' 64) \
+     --source-mnemonic="$(grep "^mnemonic" mergenet.yaml | awk -F":" '{ print $2 }' | tr -d '"' )"
+done
