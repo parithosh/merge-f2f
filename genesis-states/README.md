@@ -17,5 +17,10 @@ python generate_eth2_conf.py > "$TESTNET_NAME/public/eth2_config.yaml"
 - Generate the validator keys
 ```bash
 export VALIDATOR_NODE_NAME="valclient0"
-bash ./generate_eth2_data.sh
+bash ./generate_eth2_validator_data.sh
+```
+- generate files needed by clients specific 
+```bash
+echo 0 > "$TESTNET_NAME/public/deploy_block.txt"
+cp "$TESTNET_NAME/public/eth2_config.yaml" "$TESTNET_NAME/public/config.yaml"
 ```
