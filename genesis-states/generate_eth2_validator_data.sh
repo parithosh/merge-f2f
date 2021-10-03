@@ -41,7 +41,7 @@ do
    echo "creating keys for host $i from key $(expr 64 '*' $i) to $(expr 64 '*' $i '+' 64)"
 
    eth2-val-tools keystores \
-     --out-loc "$TESTNET_NAME/private/$VALIDATOR_NODE_NAME" \
+     --out-loc "$TESTNET_NAME/private/validator_$i" \
      --prysm-pass="foobar" \
      --source-min=$(expr 64 '*' $i) \
      --source-max=$(expr 64 '*' $i '+' 64) \
