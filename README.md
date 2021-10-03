@@ -11,11 +11,6 @@ sudo apt-get install python3-dev python3-pip python3-venv golang
 # Check that you have Go 1.16+ installed
 go version
 
-# Create, start and install python venv
-python -m venv venv 
-. venv/bin/activate
-pip install -r requirements.txt
-
 # Install eth2-testnet-genesis tool (Go 1.16+ required)
 go install github.com/protolambda/eth2-testnet-genesis@latest
 # Install eth2-val-tools
