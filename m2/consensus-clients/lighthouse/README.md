@@ -3,12 +3,15 @@
 This contains the scripts required to run Lighthouse in the M2 milestone.
 
 ## Dependency install instructions:
+- Install rust with `curl https://sh.rustup.rs -sSf | bash`
+- Install cmake `sudo apt install cmake g++ make`
 
+## Instructions:
 ```bash
 git clone https://github.com/sigp/lighthouse.git
+cd lighthouse
 git fetch origin pull/2620/head:merge-f2f
 git checkout merge-f2f
-cd lighthouse
 make
 make install-lcli
 ```
