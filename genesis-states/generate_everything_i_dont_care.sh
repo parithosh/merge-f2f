@@ -5,7 +5,7 @@ python3 -m venv venv
 . venv/bin/activate
 pip3 install -r requirements.txt
 
-TESTNET_NAME="$(grep "^testnet_name" mergenet.yaml | awk -F":" '{ print $2 }') | tr -d ' '"
+TESTNET_NAME="$(grep "^testnet_name" mergenet.yaml | awk -F": " '{ print $2 }')"
 
 mkdir -p "$TESTNET_NAME/public" "$TESTNET_NAME/private"
 # Configure Eth1 chain

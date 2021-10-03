@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TESTNET_NAME="$(grep "^testnet_name" mergenet.yaml | awk -F":" '{ print $2 }') | tr -d ' '"
+TESTNET_NAME="$(grep "^testnet_name" mergenet.yaml | awk -F": " '{ print $2 }')"
 
 ETH2_BASE_CONFIG="mainnet"
 if grep -q "eth2_base_config: minimal" mergenet.yaml; then
