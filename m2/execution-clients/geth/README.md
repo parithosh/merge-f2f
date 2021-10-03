@@ -1,4 +1,4 @@
-## Milestone #2: Geth and Lighthouse
+## Milestone #2: Geth
 
 References:
 - Geth instructions: https://notes.ethereum.org/@9AeMAlpyQYaAAyuj47BzRw/rkwW3ceVY

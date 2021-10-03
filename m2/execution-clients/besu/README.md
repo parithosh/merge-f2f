@@ -1,12 +1,7 @@
-## Milestone #2: Lighthouse and Besu
+## Milestone #2: Besu
 
 References:
 - Besu merge branch: https://github.com/hyperledger/besu/tree/merge
-
-## How To Run
-
-This testnet requires 3 terminal processes, one for Besu one for a beacon node
-and one for a validator client. See the per-terminal commands below.
 
 ### Terminal 1: Besu
 
