@@ -1,5 +1,8 @@
 # merge-f2f
 This repo is for scripts to run various clients at the merge f2f.
+
+## Tested with lighthouse!
+
 ## General dependecies
 ```bash
 apt-get install python3-dev python3-pip python3-venv golang
