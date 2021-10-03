@@ -14,7 +14,7 @@ with open(mergenet_config_path) as stream:
 
 out = {
     "config": {
-        "chainId":1,
+        "chainId": int(data['chain_id']),
         "homesteadBlock":0,
         "eip150Block":0,
         "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",

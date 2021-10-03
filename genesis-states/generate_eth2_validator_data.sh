@@ -39,4 +39,4 @@ eth2-val-tools keystores \
   --prysm-pass="foobar" \
   --source-min=0 \
   --source-max=64 \
-  --source-mnemonic="lumber kind orange gold firm achieve tree robust peasant april very word ordinary before treat way ivory jazz cereal debate juice evil flame sadness"
+  --source-mnemonic="$(grep "^mnemonic" mergenet.yaml | awk -F":" '{ print $2 }' | tr -d '"' )"
