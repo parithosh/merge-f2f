@@ -1,6 +1,5 @@
 source ./vars.env
 
-VALIDATOR_DIR=$VALIDATOR_DIR/node_1
 rm -rf $VALIDATOR_DIR
 
 echo "Generating $VALIDATOR_COUNT validator keypairs..."
@@ -16,7 +15,7 @@ echo "Staring a validator client..."
 
 $LIGHTHOUSE \
 	--debug-level $DEBUG_LEVEL \
-	--datadir $VALIDATOR_DIR/node_1 \
+	--datadir $VALIDATOR_DIR \
 	vc \
 	--testnet-dir $TESTNET_DIR \
 	--init-slashing-protection \
