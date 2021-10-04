@@ -6,7 +6,7 @@ testnet_name: mergenet
 mnemonic: "enforce patient ridge volume question system myself moon world glass later hello tissue east chair suspect remember check chicken bargain club exit pilot sand"
 number_of_validator_hosts: 1
 ## config related
-deposit_contract_address: "0x4242424242424242424242424242424242424242"
+deposit_contract_address: "0x0000000000000000000000000000000000000000"
 # either 'minimal' or 'mainnet'
 eth2_base_config: minimal
 eth2_fork_version: "0x00000700"
