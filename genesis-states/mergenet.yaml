@@ -15,4 +15,4 @@ eth1_genesis_timestamp: GENESIS_TIMESTAMP
 eth2_genesis_delay: 600
 
 # execution config
-chain_id: 700
+chain_id: 1

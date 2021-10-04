@@ -6,5 +6,5 @@ services:
     volumes:
       - ./geth_data:/data
     command: >
-      --catalyst --http --ws -http.api "engine,eth" --datadir "/data"
+      --catalyst --http --ws -http.api "engine,eth,net" --datadir "/data"
     network_mode: host
