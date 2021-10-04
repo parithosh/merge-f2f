@@ -31,7 +31,7 @@ out = {
             "period": 5,
             "epoch": 30000
         },
-        "terminalTotalDifficulty":0
+        "terminalTotalDifficulty":16
     },
     "nonce":"0x42",
     "timestamp":"0x0",
