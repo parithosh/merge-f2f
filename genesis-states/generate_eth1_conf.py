@@ -30,7 +30,7 @@ out = {
         "terminalTotalDifficulty":10
     },
     "nonce":"0x42",
-    "timestamp":int(data['eth1_genesis_timestamp']),
+    "timestamp":hex(int(data['eth1_genesis_timestamp'])),
     "extraData":"0x0000",
     "gasLimit":"0x1C9C380",
     "difficulty":"0x0",
