@@ -1,0 +1,41 @@
+version: "3.4"
+services:
+  beacon_node:
+    image: sigp/lighthouse:merge-f2f
+    restart: always
+    volumes:
+      - ./beacon_data:/data
+      - ../../../genesis-states/${TESTNET_NAME}/public:/testnet_config_data
+    command: >
+      lighthouse 	--spec $SPEC \
+                    --testnet-dir /testnet_config_data \
+                    --debug-level $DEBUG_LEVEL \
+                    beacon_node \
+                    --datadir /data \
+                    --dummy-eth1 \
+                    --http \
+                    --http-allow-sync-stalled \
+                    --metrics \
+                    --merge \
+                    --execution-endpoints $EE_ENDPOINT \
+                    --terminal-block-hash-override $GENESIS_BLOCK_HASH
+
+    network_mode: host
+    env_file: vars.env
+  validator_node:
+    image: sigp/lighthouse:merge-f2f
+    restart: always
+    volumes:
+      - ./validator_data:/data
+      - ../../../genesis-states/${TESTNET_NAME}/public:/testnet_config_data
+      - ../../../genesis-states/${TESTNET_NAME}/private/validator_0:/validator_keys
+    command: >
+      lighthouse  --debug-level $DEBUG_LEVEL \
+                  --datadir /validator_keys \
+                  vc \
+                  --testnet-dir /testnet_config_data \
+                  --init-slashing-protection \
+                  --beacon-nodes http://localhost:5052 \
+    network_mode: host
+    env_file: vars.env
+
