@@ -5,7 +5,11 @@ References:
 - Geth PR: https://github.com/ethereum/go-ethereum/pull/23607
 
 ## Quick instructions:
-- Run `docker run -v ./geth_data:/data -v ../../../genesis-states/$TESTNET_NAME/public/eth1_config.json:/genesis.json parithoshj/geth:merge-<choose latest tag> --catalyst --datadir "/datadir" init /genesis.json`
+- Run 
+```
+souce vars.env
+docker run -v $(pwd)/geth_data:/data -v $(pwd)/../../../genesis-states/$TESTNET_NAME/public/:/genesis parithoshj/geth:merge-00f36885a --catalyst --datadir "/data" init /genesis/eth1_config.json
+```
 - Run `docker-compose up -d`
 ## Dependency install instructions:
 - Install [go](https://golang.org/doc/install)
@@ -19,6 +23,5 @@ cd go-ethereum
 git checkout merge-interop-spec
 make geth
 cd ..
-./go-ethereum/build/bin/geth --catalyst --datadir "./datadir" init genesis.json
-./go-ethereum/build/bin/geth --catalyst --http --ws -http.api "engine,eth" --datadir "./datadir"
+c./go-ethereum/build/bin/geth --catalyst --http --ws -http.api "engine,eth" --datadir "./datadir"
 ```
