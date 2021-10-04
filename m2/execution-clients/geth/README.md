@@ -4,6 +4,9 @@ References:
 - Geth instructions: https://notes.ethereum.org/@9AeMAlpyQYaAAyuj47BzRw/rkwW3ceVY
 - Geth PR: https://github.com/ethereum/go-ethereum/pull/23607
 
+## Quick instructions:
+- Run `docker run -v ./geth_data:/data -v ../../../genesis-states/$TESTNET_NAME/public/eth1_config.json:/genesis.json parithoshj/geth:merge-<choose latest tag> --catalyst --datadir "/datadir" init /genesis.json`
+- Run `docker-compose up -d`
 ## Dependency install instructions:
 - Install [go](https://golang.org/doc/install)
 - Ensure build essentials are installed, `sudo apt install build-essential`

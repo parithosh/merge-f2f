@@ -1,0 +1,10 @@
+version: "3.4"
+services:
+  geth:
+    image: parithoshj/geth:merge-b798cbd
+    restart: always
+    volumes:
+      - ./geth_data:/data
+    command: >
+      --catalyst --http --ws -http.api "engine,eth" --datadir "/datadir"
+    network_mode: host
