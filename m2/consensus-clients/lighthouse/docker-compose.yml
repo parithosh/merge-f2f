@@ -1,6 +1,6 @@
 version: "3.4"
 services:
-  beacon_node:
+  beacon:
     image: sigp/lighthouse:merge-f2f
     restart: always
     volumes:
@@ -21,7 +21,7 @@ services:
                     --terminal-block-hash-override $GENESIS_BLOCK_HASH
 
     network_mode: host
-  validator_node:
+  validator:
     image: sigp/lighthouse:merge-f2f
     restart: always
     volumes:
