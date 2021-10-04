@@ -35,7 +35,7 @@ out = {
     },
     "nonce":"0x42",
     "timestamp":"0x0",
-    "extraData":"0x00000",
+    "extraData":"0x0000",
     "gasLimit":"0x1C9C380",
     "difficulty":"0x0",
     "mixHash":"0x0000000000000000000000000000000000000000000000000000000000000000",
