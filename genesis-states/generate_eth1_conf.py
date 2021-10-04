@@ -27,7 +27,7 @@ out = {
         "muirGlacierBlock":0,
         "berlinBlock":0,
         "londonBlock":0,
-        "terminalTotalDifficulty":0
+        "terminalTotalDifficulty":10
     },
     "nonce":"0x42",
     "timestamp":"0x0",
