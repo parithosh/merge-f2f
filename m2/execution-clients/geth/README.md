@@ -7,7 +7,7 @@ References:
 ## Quick instructions:
 - Run 
 ```
-souce vars.env
+source vars.env
 docker run -v $(pwd)/geth_data:/data -v $(pwd)/../../../genesis-states/$TESTNET_NAME/public/:/genesis parithoshj/geth:merge-00f36885a --catalyst --datadir "/data" init /genesis/eth1_config.json
 ```
 - Run `docker-compose up -d`
@@ -23,5 +23,5 @@ cd go-ethereum
 git checkout merge-interop-spec
 make geth
 cd ..
-c./go-ethereum/build/bin/geth --catalyst --http --ws -http.api "engine,eth" --datadir "./datadir"
+./start_geth.sh
 ```
