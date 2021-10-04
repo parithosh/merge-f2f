@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ./vars.env
-
 EE_PORT=${1:-8545}
 EE_ENDPOINT="http://localhost:${EE_PORT}"
 
