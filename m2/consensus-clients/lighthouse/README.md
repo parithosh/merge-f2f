@@ -2,6 +2,10 @@
 
 This contains the scripts required to run Lighthouse in the M2 milestone.
 
+## Quick install instructions:
+- Run `docker-compose --env-file ./vars.env up -d`. This will run a beacon_node and validator_client in the background.
+- That's all! Go check out the logs :D
+
 ## Dependency install instructions:
 - Install rust with `curl https://sh.rustup.rs -sSf | bash`
 - Install cmake `sudo apt install cmake g++ make`
