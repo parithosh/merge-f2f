@@ -27,10 +27,6 @@ out = {
         "muirGlacierBlock":0,
         "berlinBlock":0,
         "londonBlock":0,
-        "clique": {
-            "period": 5,
-            "epoch": 30000
-        },
         "terminalTotalDifficulty":0
     },
     "nonce":"0x42",
