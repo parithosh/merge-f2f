@@ -4,8 +4,8 @@
 # shellcheck disable=SC2039
 ARRAY=( "validator_0:ligthouse" )
 
-INPUT_DATA_DIR="validator_prep"
-OUTPUT_DATA_DIR="selected_validator_keys"
+INPUT_DATA_DIR="mergenet/private"
+OUTPUT_DATA_DIR="mergenet/selected"
 
 # Delete any existing output dir and ensure the final key store dir is present
 rm -rf "$OUTPUT_DATA_DIR" && mkdir -p "$OUTPUT_DATA_DIR"
