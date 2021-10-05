@@ -27,7 +27,7 @@ services:
     volumes:
       - ./validator_data:/data
       - "../../../genesis-states/${TESTNET_NAME}/public:/testnet_config_data"
-      - "../../../genesis-states/${TESTNET_NAME}/private/validator_0:/validator_keys"
+      - "../../../genesis-states/${TESTNET_NAME}/selected/validator_0:/validator_keys"
     command: >
       lighthouse  --debug-level $DEBUG_LEVEL
                   --datadir /validator_keys
