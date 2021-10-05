@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   geth:
-    image: parithoshj/geth:merge-a0fe68b
+    image: parithoshj/geth:merge-00f36885a
     restart: always
     volumes:
       - ./geth_data:/data
