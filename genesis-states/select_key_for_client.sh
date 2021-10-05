@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 # Manually update the client required, the script will move the keys into the format required by the client
 # shellcheck disable=SC2039
-ARRAY=( "validator_0:ligthouse" )
+ARRAY=( "validator_0:lighthouse" )
 
 INPUT_DATA_DIR="mergenet/private"
 OUTPUT_DATA_DIR="mergenet/selected"
