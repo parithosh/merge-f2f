@@ -6,7 +6,7 @@ python3 -m venv venv
 pip3 install -r requirements.txt
 
 # edit the genesis time
-sed -i "/eth1_genesis_timestamp:/c\eth1_genesis_timestamp: $(expr $(date +%s) '+' 100)" mergenet.yaml
+sed -i "/eth1_genesis_timestamp:/c\eth1_genesis_timestamp: $(expr $(date +%s))" mergenet.yaml
 # get testnet name
 TESTNET_NAME="$(grep "^testnet_name" mergenet.yaml | awk -F": " '{ print $2 }')"
 
