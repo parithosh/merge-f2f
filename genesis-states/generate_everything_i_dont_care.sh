@@ -13,7 +13,9 @@ TESTNET_NAME="$(grep "^testnet_name" mergenet.yaml | awk -F": " '{ print $2 }')"
 # create fodler
 mkdir -p "$TESTNET_NAME/public" "$TESTNET_NAME/private"
 # Configure Eth1 chain
-python generate_eth1_conf.py > "$TESTNET_NAME/public/eth1_config.json"
+#python generate_eth1_conf.py > "$TESTNET_NAME/public/eth1_config.json"
+# Move the commited genesis json file
+mv eth1_config.json "$TESTNET_NAME/public/eth1_config.yaml"
 # Configure Eth2 chain
 python generate_eth2_conf.py > "$TESTNET_NAME/public/eth2_config.yaml"
 

@@ -8,13 +8,7 @@ services:
       - "../../../genesis-states/${TESTNET_NAME}/public:/testnet_config_data"
       - "../../../genesis-states/${TESTNET_NAME}/private/validator_0:/validator_keys"
     command: >
-      dev --rootDir /data --genesisValidators 32 --startValidators 0:31
-      --api.rest.enabled --api.rest.host 0.0.0.0
-      --logFile /logs/beacon.log --logLevelFile debug --logRotate --logMaxFiles 5
-      --params.ALTAIR_FORK_EPOCH 0
-      --params.MERGE_FORK_EPOCH 0
-      --params.TRANSITION_TOTAL_DIFFICULTY 0
-      --execution.urls http://localhost:8550
+          lodestar beacon --rcConfig amphora/v1/rcconfig.yml --rootDir /data
     environment:
-      NODE_OPTIONS: --max_old_space_size=6144
+      LODESTAR_PRESET=minimal
     network_mode: host
